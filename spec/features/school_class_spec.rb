@@ -12,10 +12,11 @@ describe 'form page' do
 
     fill_in 'school_class_title', with: "Software Engineering"
     fill_in 'school_class_room_number', with: 10
-
+    
     click_on "Create School class"
-
+    
     expect(page).to have_content("Software Engineering")
+    
   end
 
   it 'edit form submits content and renders form content' do
