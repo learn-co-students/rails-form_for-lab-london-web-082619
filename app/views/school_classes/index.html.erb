@@ -1,0 +1,14 @@
+<h1>School Classes</h1>
+
+<% @school_classes.each do |school_class| %>
+Title: <%= link_to school_class.title, school_class %> |
+Room Num: <%=  school_class.room_number %>
+<br>
+<%= link_to "Edit", edit_school_class_path(school_class) %> |
+<%= link_to "Delete", school_class_path(school_class),
+method: :delete, data: {confirm: 'Are you sure?'} %>
+<br> --------------------------------------------
+<br>
+<% end %>
+<br>
+<%= link_to "New Class", new_school_class_path %>

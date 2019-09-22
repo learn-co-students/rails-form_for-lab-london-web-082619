@@ -1,0 +1,9 @@
+<h1>Title: <%= @school_class.title %></h1>
+<h3>Room number: <%= @school_class.room_number %></h3>
+
+<%= link_to "Back", school_classes_path %> |
+<%= link_to "Edit", edit_school_class_path(@school_class) %>
+<%= link_to "Delete", school_class_path(@school_class), 
+method: :delete, 
+date: {confirm: 'Are you sure?'} %>
+
