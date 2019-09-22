@@ -13,7 +13,7 @@ class SchoolClassesController < ApplicationController
   end
 
   def create
-    @school_class = SchoolClass.create(title: params[:title], room_number: params[:room_number])
+    @school_class = SchoolClass.create(school_class_params)
     redirect_to school_class_path(@school_class)
   end
 
