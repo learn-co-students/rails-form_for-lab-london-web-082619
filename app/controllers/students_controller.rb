@@ -1,7 +1,7 @@
 class StudentsController < ApplicationController
 
     def index
-    @students = Student.all
+        @students = Student.all
     end
 
     def new
@@ -29,6 +29,7 @@ class StudentsController < ApplicationController
 
     def delete
        Studen.destroy(params[:id])
+       redirect_to students_path
     end
 
     private
